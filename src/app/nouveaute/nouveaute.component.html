@@ -1,0 +1,13 @@
+<section>
+    <form>
+        <input type="text" placeholder="filtrer par lieu d'atterrissage">
+        <button class="primary" type="button">recherche</button>
+    </form>
+</section>
+
+<section class="results">
+    <app-lieu-d-atterrissage
+    *ngFor="let lieuDAtterrissage of lieuDAtterrissageList"
+    [lieuDAtterrissage]="lieuDAtterrissage">
+    </app-lieu-d-atterrissage>
+</section>
