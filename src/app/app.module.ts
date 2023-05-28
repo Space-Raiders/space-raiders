@@ -7,6 +7,9 @@ import { NouveauteComponent } from './nouveaute/nouveaute.component';
 import { BestdestinationsComponent } from './bestdestinations/bestdestinations.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { LieuDAtterrissageComponent } from './nouveaute/lieu-d-atterrissage/lieu-d-atterrissage.component';
+import { LieuDAtterrissageDetailsComponent } from './nouveaute/lieu-d-atterrissage-details/lieu-d-atterrissage-details.component';
+import {NgOptimizedImage} from "@angular/common";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { LieuDAtterrissageComponent } from './nouveaute/lieu-d-atterrissage/lieu
     NouveauteComponent,
     BestdestinationsComponent,
     InscriptionComponent,
-    LieuDAtterrissageComponent
+    LieuDAtterrissageComponent,
+    LieuDAtterrissageDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgOptimizedImage,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

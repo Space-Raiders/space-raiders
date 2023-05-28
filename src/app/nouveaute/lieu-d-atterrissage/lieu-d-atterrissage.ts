@@ -5,6 +5,6 @@ export interface LieuDAtterrissage {
     state: string;
     photo: string;
     availableUnits: number;
-    wifi: boolean;
-    laundry: boolean;
+    wifi: number;
+    laundry: number | string | undefined;
 }

@@ -9,3 +9,4 @@ import {LieuDAtterrissage} from "./lieu-d-atterrissage";
 export class LieuDAtterrissageComponent {
   @Input () lieuDAtterrissage!: LieuDAtterrissage;
 }
+

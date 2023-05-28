@@ -2,6 +2,7 @@
   background: #444333;
   border-radius: 30px;
   padding-bottom: 30px;
+  color: lightgray;
 }
 .listing-heading {
   color: lightgray;
@@ -17,7 +18,7 @@
   padding: 10px 20px 20px 20px;
 }
 .listing-location::before {
-  content: url("../../../assets/placeholder.png") / "";
+  content: url("../../../assets/Share_20.png") / "";
 }
 
 section.listing a {

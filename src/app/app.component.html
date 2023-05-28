@@ -1,8 +1,17 @@
-<h1>partie de dadou</h1>
+<main>
+  <a [routerLink]="['/']">
+    <header class="brand-name">
+      <h1>partie de dadou</h1>
+      <h2>bloc nouveauté</h2>
+    </header>
+  </a>
+
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
+</main>
+
 <br>
-<h3>bloc nouveauté</h3>
-<br>
-<app-nouveaute></app-nouveaute>
 <br>
 <h3>bloc best destinations</h3>
 <br>
