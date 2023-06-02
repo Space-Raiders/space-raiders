@@ -1,4 +1,29 @@
+
 <app-header></app-header>
 <app-hero></app-hero>
+<app-api></app-api>
+<app-prix></app-prix>
+
+<main>
+  <a [routerLink]="['/']">
+    <header class="brand-name">
+    </header>
+  </a>
+
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
+</main>
+
+<br>
+<br>
+<h3>bloc best destinations</h3>
+<br>
+<app-bestdestinations></app-bestdestinations>
+<br>
+<h3>bloc inscription</h3>
+<br>
+<app-inscription></app-inscription>
 <app-newsletter></app-newsletter>
-<router-outlet></router-outlet>
+<app-footer></app-footer>
+
