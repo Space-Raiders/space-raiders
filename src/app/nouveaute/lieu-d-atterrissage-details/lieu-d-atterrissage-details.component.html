@@ -1,0 +1,33 @@
+<article>
+  <img class="listing-photo" [src]="lieuDAtterrissage?.photo" alt="lieu spatial historique {{ lieuDAtterrissage?.name }}"/>
+
+  <section class="listing-description">
+    <h2 class="listing-heading">{{ lieuDAtterrissage?.name }}</h2>
+    <p class="listing-location"> ➲ {{ lieuDAtterrissage?.city }}, {{ lieuDAtterrissage?.state }}</p>
+  </section>
+
+  <section class="listing-features">
+    <h2 class="section-heading">Explorer les sites lunaires historiques </h2>
+    <ul>
+      <li>◐ <b>La distance entre la terre et lune : </b>Distance variante entre la Terre et la Lune : {{ lieuDAtterrissage?.availableUnits }} <b>km.</b> </li>
+      <li>◐ <b>Durée du séjour lunaire : </b> En fonction de la catégorie de billet choisie. Ce voyage revient à : {{ lieuDAtterrissage?.wifi }} <b>€.</b></li>
+      <li>◐ <b>Classes : </b> {{ lieuDAtterrissage?.laundry }}.</li>
+    </ul>
+  </section>
+
+  <section class="listing-apply">
+    <h2 class="section-heading">Contactez-nous pour en savoir plus</h2>
+    <form [formGroup]="applyForm" (submit)="submitApplication()">
+      <label for="nom">votre Nom</label>
+      <input id="nom" type="text" formControlName="nom">
+
+      <label for="prenom">votre Prénom</label>
+      <input id="prenom" type="text" formControlName="prenom">
+
+      <label for="email">Adresse mail</label>
+      <input id="email" type="text" formControlName="email">
+
+      <button type="submit" class="primary">Envoyez-nous</button>
+    </form>
+  </section>
+</article>
