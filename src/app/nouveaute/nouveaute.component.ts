@@ -11,8 +11,20 @@ import {LieuDAtterrissageService} from "./lieu-d-atterrissage/lieu-d-atterrissag
 export class NouveauteComponent {
   lieuDAtterrissageList: LieuDAtterrissage[] = [];
   lieuDAtterrissageService: LieuDAtterrissageService = inject(LieuDAtterrissageService);
+  filtrerLieuDAtterrissageList: LieuDAtterrissage[] = [];
 
   constructor() {
     this.lieuDAtterrissageList = this.lieuDAtterrissageService.getAllLieuDAtterrissage();
+    this.filtrerLieuDAtterrissageList = this.lieuDAtterrissageList;
+  }
+
+  filtrerResultats(text: string) {
+    if (!text) {
+      this.filtrerLieuDAtterrissageList = this.lieuDAtterrissageList;
+    }
+
+    this.filtrerLieuDAtterrissageList = this.lieuDAtterrissageList.filter(
+      lieuDAtterrissage => lieuDAtterrissage?.state.toLowerCase().includes(text.toLowerCase())
+    );
   }
 }

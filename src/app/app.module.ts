@@ -10,6 +10,7 @@ import { LieuDAtterrissageComponent } from './nouveaute/lieu-d-atterrissage/lieu
 import { LieuDAtterrissageDetailsComponent } from './nouveaute/lieu-d-atterrissage-details/lieu-d-atterrissage-details.component';
 import {NgOptimizedImage} from "@angular/common";
 import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     NgOptimizedImage,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
