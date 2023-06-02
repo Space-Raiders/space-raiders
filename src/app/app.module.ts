@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { HeroComponent } from './hero/hero.component';
+import { NewsletterComponent } from './newsletter/newsletter.component';
 
 import { PrixComponent } from './prix/prix.component';
 import { ApiComponent } from './api/api.component';
@@ -21,6 +24,10 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    HeroComponent,
+    NewsletterComponent,
+
 
     PrixComponent,
     ApiComponent,
@@ -31,6 +38,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     InscriptionComponent,
     LieuDAtterrissageComponent,
     LieuDAtterrissageDetailsComponent
+
 
   ],
   imports: [

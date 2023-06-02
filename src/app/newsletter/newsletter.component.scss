@@ -1,0 +1,93 @@
+#main {
+    background-image: url("../../assets/images/earth.png");
+    height: 81vh;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+// form generale
+form {
+    color: black;
+    text-align: center;
+}
+
+// Titre newsletter
+form h1 {
+    background-color: white;
+    width: 50vh;
+    height: 10vh;
+    border-radius: 10px;
+    padding-top: 2vh;
+    text-align: center;
+    margin: auto;
+}
+
+// champ name et email
+form div {
+    width: 100vh;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+    margin: auto;
+}
+
+// bouton formulaire 
+form button {
+    background-color: white;
+    color: black;
+    width: 50vh;
+    height: 10vh;
+    margin-top: 2vh;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 680px) {
+
+    #main {
+        background-image: url("../../assets/images/earth.png");
+        height: 72vh;
+        background-position: center;
+    }
+
+    // form generale
+
+    form {
+        color: black;
+        text-align: center;
+    }
+
+
+    // Titre newsletter
+
+    form h1 {
+        background-color: white;
+        width: 30vh;
+        height: 8vh;
+        border-radius: 10px;
+        padding-top: 2vh;
+        text-align: center;
+        margin: auto;
+    }
+
+    // champ name et email
+
+    form div {
+        width: 50vh;
+        margin-bottom: 10vh;
+        margin-top: 5vh;
+        margin: auto;
+    }
+
+    // bouton formulaire 
+
+    form button {
+        background-color: white;
+        color: black;
+        width: 30vh;
+        height: 8vh;
+        margin-top: 2vh;
+        text-align: center;
+
+    }
+
+}
