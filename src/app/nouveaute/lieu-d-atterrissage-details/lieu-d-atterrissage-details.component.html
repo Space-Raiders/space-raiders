@@ -9,25 +9,33 @@
   <section class="listing-features">
     <h2 class="section-heading">Explorer les sites lunaires historiques </h2>
     <ul>
-      <li>◐ <b>La distance entre la terre et lune : </b>Distance variante entre la Terre et la Lune : {{ lieuDAtterrissage?.availableUnits }} <b>km.</b> </li>
-      <li>◐ <b>Durée du séjour lunaire : </b> En fonction de la catégorie de billet choisie. Ce voyage revient à : {{ lieuDAtterrissage?.wifi }} <b>€.</b></li>
-      <li>◐ <b>Classes : </b> {{ lieuDAtterrissage?.laundry }}.</li>
+      <li><b>La distance entre la terre et lune : </b>Distance variante entre la Terre et la Lune ◐ {{ lieuDAtterrissage?.availableUnits }} <b>km.</b> </li>
+      <li><b>Durée du séjour lunaire : </b> Selon la catégorie de billet. Ce voyage revient à ◐ {{ lieuDAtterrissage?.wifi }} <b>€.</b></li>
+      <li><b>Classes : </b> ◐ {{ lieuDAtterrissage?.laundry }}.</li>
     </ul>
   </section>
 
   <section class="listing-apply">
     <h2 class="section-heading">Contactez-nous pour en savoir plus</h2>
+
     <form [formGroup]="applyForm" (submit)="submitApplication()">
-      <label for="nom">votre Nom</label>
-      <input id="nom" type="text" formControlName="nom">
 
-      <label for="prenom">votre Prénom</label>
-      <input id="prenom" type="text" formControlName="prenom">
+      <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input id="nom" type="text" formControlName="nom" class="input-field" placeholder="nom et prénom">
+      </div>
 
-      <label for="email">Adresse mail</label>
-      <input id="email" type="text" formControlName="email">
+      <div class="input-container">
+        <i class="fa fa-envelope icon"></i>
+        <input id="prenom" type="text" formControlName="email" class="input-field" placeholder="adresse mail">
+      </div>
 
-      <button type="submit" class="primary">Envoyez-nous</button>
+      <div class="input-container">
+        <i class="fa fa-key icon"></i>
+        <input id="email" type="password" formControlName="psw" class="input-field" placeholder="mot de passe">
+      </div>
+
+      <button type="submit" class="btn">Envoyez-nous</button>
     </form>
   </section>
 </article>
