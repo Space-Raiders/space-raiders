@@ -26,7 +26,7 @@ button {
 
 @media (min-width: 500px) and (max-width: 768px) {
   .results {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   input[type="text"] {
     width: 70%;

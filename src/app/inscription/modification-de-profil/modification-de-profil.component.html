@@ -1,0 +1,51 @@
+<section class="listing-apply">
+  <h2 class="section-heading">Si vous êtes intéressé par nos offres, <br>inscrivez-vous dès que possible.</h2>
+
+  <form [formGroup]="profilForm">
+    <div class="input-container">
+      <i class="fa fa-user icon"></i>
+      <input id="nom" type="text" formControlName="nom" class="input-field" placeholder="nom">
+    </div>
+    <div class="input-container">
+      <i class="fa fa-address-book icon"></i>
+      <input id="prenom" type="text" formControlName="prenom" class="input-field" placeholder="prénom">
+    </div>
+
+    <div formGroupName="adresse">
+      <h4>Adresse complète</h4>
+      <div class="input-container">
+        <i class="fa fa-home icon"></i>
+        <input id="adresse" type="text" formControlName="adresse" class="input-field" placeholder="adresse">
+      </div>
+      <div class="input-container">
+        <i class="fa fa-street-view icon"></i>
+        <input id="commune" type="text" formControlName="commune" class="input-field" placeholder="commune">
+      </div>
+      <div class="input-container">
+        <i class="fa fa-ravelry icon"></i>
+        <input id="pays" type="text" formControlName="pays" class="input-field" placeholder="pays">
+      </div>
+      <div class="input-container">
+        <i class="fa fa-envelope-open icon"></i>
+        <input id="codePostal" type="text" formControlName="codePostal" class="input-field" placeholder="code postal">
+      </div>
+    </div>
+
+    <button type="button" (click)="updateProfil()" class="btn">Afficher l'exemple</button>
+
+    <div formArrayName="aliases">
+      <h4 style="margin: 15px">Ajouter des renseignements personnels</h4>
+
+      <button type="button" (click)="addAlias()" class="btn" style="margin-bottom: 15px">➲ Ajouter</button>
+
+      <div *ngFor="let alias of aliases.controls; let i=index" class="input-container">
+        <i class="fa fa-plus-square icon"></i>
+        <!-- <label for="alias-{{ i }}">Alias :</label> -->
+        <input id="alias-{{ i }}" type="text" [formControlName]="i" class="input-field" placeholder="ajouter des renseignements personnels">
+      </div>
+    </div>
+
+    <!-- <p>statut du formulaire : {{profilForm.status}}</p> -->
+
+  </form>
+</section>

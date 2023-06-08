@@ -23,16 +23,17 @@ export class LieuDAtterrissageDetailsComponent {
   }
 
   applyForm = new FormGroup({
-    nom: new FormControl(''),
-    prenom: new FormControl(''),
-    email: new FormControl('')
+    nomEtPrenom: new FormControl('', {nonNullable: true}),
+    email: new FormControl('', {nonNullable: true}),
+    motDePasse: new FormControl('', {nonNullable: true})
   });
+
 
   submitApplication() {
     this.lieuDAtterrissageService.submitApplication(
-      this.applyForm.value.nom ?? '',
-      this.applyForm.value.prenom ?? '',
-      this.applyForm.value.email ?? ''
+      this.applyForm.value.nomEtPrenom ?? '',
+      this.applyForm.value.email ?? '',
+      this.applyForm.value.motDePasse ?? ''
     )
   }
 
