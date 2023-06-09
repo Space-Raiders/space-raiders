@@ -8,7 +8,7 @@ export class LieuDAtterrissageService {
   lieuDAtterrissageList: LieuDAtterrissage[] = [
     {
       id: 1,
-      name: "Premier pat sur la lune",
+      name: "Premier pas sur la lune",
       city: "Appolo 11",
       state: 'Mer de tranquillité - USA',
       photo: 'assets/images/astronaut-11080.jpg',

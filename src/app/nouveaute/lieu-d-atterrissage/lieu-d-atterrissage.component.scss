@@ -30,3 +30,9 @@ section.listing a::after {
   content: "\203A";
   margin-left: 5px;
 }
+
+// FRANCK Modif 
+.listing {
+  border-radius: 10px 10px 0px 0px;
+  height: 500px;
+}
