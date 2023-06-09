@@ -3,51 +3,44 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
 h5 {
     color: azure;
-    margin-bottom: 10px;
+    font-weight: 600;
+    margin: 10px 10px;
 }
 
-footer {
-    background-color:#f8f9f9;
-    // position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
+// FOOTER 1
 .footer1 {
+    // border: 1px solid red;
     background-color: #051039;
-    width: 100%;
-    flex-grow: 1;
-    justify-content: center;
-    padding-bottom: 50px;
+    padding: 20px 0px;
 }
-
 .bloc {
-    width: 200px;
-    height: 200px; 
-    margin: 30px 20px;
+    // border: 1px solid red;
+    width: auto;
+    margin: 0px 0px;
+    padding: 10px 0px;
 }
-
 .bloc a {
     color: white;
     font-size: 14px;
-    margin: 5px 0px;
+    text-decoration: none;
+    display: block;
+    margin: 10px 10px;
 }
-
 .bloc a:hover {
     text-decoration:underline;
 }
 
+// FOOTER 2
 .footer2 {
     background-color: #f8f9f9;
-    flex-grow: 0;
     text-align: center;
 }
-
-a {
+.footer2 a {
     text-decoration: none;
-    color: black;   
+    color: #051039;   
+}
+.footer2 a:hover {
+    text-decoration: underline;  
 }

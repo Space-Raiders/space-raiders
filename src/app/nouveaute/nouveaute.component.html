@@ -1,13 +1,18 @@
 <section>
+
+    <h2>Renseignez-vous sur nos destinations</h2>
+
     <form>
         <input type="text" placeholder="Filtrer par lieu - par exemple 'mer de tranquillité' ou 'mer' etc." #filter>
         <button class="primary" type="button" (click)="filtrerResultats(filter.value)">lancer ➲ </button>
     </form>
+    
+    <div class="results">
+        <app-lieu-d-atterrissage
+          *ngFor="let lieuDAtterrissage of filtrerLieuDAtterrissageList"
+          [lieuDAtterrissage]="lieuDAtterrissage">
+        </app-lieu-d-atterrissage>
+    </div>
+    
 </section>
 
-<section class="results">
-    <app-lieu-d-atterrissage
-      *ngFor="let lieuDAtterrissage of filtrerLieuDAtterrissageList"
-      [lieuDAtterrissage]="lieuDAtterrissage">
-    </app-lieu-d-atterrissage>
-</section>
