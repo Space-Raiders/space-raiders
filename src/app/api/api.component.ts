@@ -15,7 +15,7 @@ export class ApiComponent {
   ngOnInit() {
     this.api.apiCall().subscribe((data: any) => {
       console.warn("get api data", data);
-      this.planetName = data['id']
+      this.planetName = data['id = 2295434']
     })
   }
 }
