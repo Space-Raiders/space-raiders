@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,15 +9,15 @@ import { BestdestinationsComponent } from './bestdestinations/bestdestinations.c
 import { InscriptionComponent } from './inscription/inscription.component';
 import { LieuDAtterrissageComponent } from './nouveaute/lieu-d-atterrissage/lieu-d-atterrissage.component';
 import { LieuDAtterrissageDetailsComponent } from './nouveaute/lieu-d-atterrissage-details/lieu-d-atterrissage-details.component';
-import {NgOptimizedImage} from "@angular/common";
-import {ReactiveFormsModule} from "@angular/forms";
+import { NgOptimizedImage } from "@angular/common";
+import { ReactiveFormsModule } from "@angular/forms";
 import { ModificationDeProfilComponent } from './inscription/modification-de-profil/modification-de-profil.component';
-import {PrixComponent} from "./prix/prix.component";
-import {ApiComponent} from "./api/api.component";
-import {FooterComponent} from "./footer/footer.component";
-import {HeaderComponent} from "./header/header.component";
-import {HeroComponent} from "./hero/hero.component";
-import {NewsletterComponent} from "./newsletter/newsletter.component";
+import { PrixComponent } from "./prix/prix.component";
+import { ApiComponent } from "./api/api.component";
+import { FooterComponent } from "./footer/footer.component";
+import { HeaderComponent } from "./header/header.component";
+import { HeroComponent } from "./hero/hero.component";
+import { NewsletterComponent } from "./newsletter/newsletter.component";
 import { ValidationReactiveComponent } from './inscription/validation-reactive/validation-reactive.component';
 
 @NgModule({
@@ -38,6 +39,7 @@ import { ValidationReactiveComponent } from './inscription/validation-reactive/v
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgOptimizedImage,
     ReactiveFormsModule
