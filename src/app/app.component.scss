@@ -9,11 +9,11 @@ main {
 }
 
 .mohammed_2 {;
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
 }
 
 .franck_1 {;
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
 }
 
 .franck_2 {
@@ -36,4 +36,20 @@ main {
 }
 
 .franck_3 {
+}
+
+// FRANCK Modif 
+.dadou_1 a {
+  text-decoration: none;
+}
+.dadou_1 a header {
+  margin: 50px auto;
+  width: 150px;
+  height: 50px;
+  background-color: #051039;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
