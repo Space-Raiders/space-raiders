@@ -1,2 +1,22 @@
 <p>CARD BEST DESTINATION</p>
 <p>CONSTRUCTION EN COURS</p>
+<section class="container-fluid ">
+
+    <h2 class="text-center mb-5 mx-5 fw-bold">Notre encyclopédie de l'espace à votre disposition
+    </h2>
+
+    <div class="search row">
+        <div class="d-flex gap-2 fs-6">
+            <input class="col-sm-10 text-center border-1" type="text" placeholder="Learn about space"
+                [(ngModel)]="searchQuery" (keyup.enter)="searchImages()">
+            <button class="col-sm border-1 p-3" (click)="searchImages()">Submit</button>
+        </div>
+        <div id="imgApi" class="border border-black col-md mt-3 mb-3 mx-5 p-3 fs-6" style="column-count: 2;">
+
+            <div *ngFor="let hit of hits">
+                <img [src]="hit.webformatURL" alt="{{ hit.tags }}">
+
+            </div>
+        </div>
+    </div>
+</section>

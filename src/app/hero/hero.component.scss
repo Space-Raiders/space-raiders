@@ -124,8 +124,6 @@
   transition: all 0.5s ease;
   padding: 0;
   background-color: #051039;
-  margin-right: 100px;
-  margin-left: 100px;
 
 }
 
@@ -171,7 +169,7 @@
   margin-left: 100px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1240px) {
   #burger {
     display: block;
     border-radius: 25px;
