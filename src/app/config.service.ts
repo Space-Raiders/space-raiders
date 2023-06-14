@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from "@angular/common/http";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigService {
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  private apiUrl = 'https://api.le-systeme-solaire.net/rest.php/bodies';
 
-  apiCall() {
-    return this.http.get('https://pixabay.com/api/?key=36745863-3668c0d43cabb91e96c01249b&q=yellow+flowers&image_type=photo&pretty=true');
+  constructor(private http: HttpClient) { }
+
+  getPlanetDetails(planetName: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${planetName}`);
   }
+
 }

@@ -1,24 +1,35 @@
-<!-- SECTION 2 API / FRANCK-->
 <section class="container-fluid ">
+
 
     <h2 class="text-center mb-5 mx-5 fw-bold">Notre encyclopédie de l'espace à votre disposition
     </h2>
 
+
     <div class="search row">
         <div class="d-flex gap-2 fs-6">
-            <input class="col-sm-10 text-center border-1" type="text" placeholder="Learn about space">
-            <button class="col-sm border-1 p-3">Submit</button>
+            <input class="col-sm-10 text-center border-1" type="text" placeholder="Learn about space"
+                [(ngModel)]="planetName">
+            <button class="col-sm border-1 p-3" (click)="searchPlanet()">Submit</button>
         </div>
-        <!-- <div class="border border-black col-md mt-3 mb-3 mx-5 p-3 fs-6">{{planetName}}</div> -->
+
+
+
+
     </div>
 </section>
 <!-- </div> -->
 
-<div class="api-result border border-black col-sm mt-3 mb-3 p-3 fs-6"></div>
 
-<!-- </section> -->
+<div class="api-result border border-black col-sm mt-3 mb-3 p-3 fs-6">
+    <div style="background-color: white;" id="" *ngIf="planetDetails">
+        <h2 style="color: black;">{{ planetDetails.englishName }}</h2>
+        <p>Gravity: {{ planetDetails.gravity }}</p>
+        <p>Mass: {{ planetDetails.mass.massValue }} x 10^{{ planetDetails.mass.massExponent }} kg</p>
+        <p>Volume ; {{planetDetails.vol.volValue}} valeur exponentiel {{planetDetails.vol.volExponent}} </p>
+        <p>Close planet: {{ planetDetails.aroundPlanet.planet }}</p>
+        <p>Planest density : {{planetDetails.density}} </p>
 
-<div class="deco">
-    <div class="api-result border border-black col-sm mt-3 mb-3 p-3 fs-6"></div>
 
+        <!-- Display other planet details as desired -->
+    </div>
 </div>
