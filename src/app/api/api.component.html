@@ -10,22 +10,23 @@
                 [(ngModel)]="planetName">
             <button class="col-sm border-1 p-3" (click)="searchPlanet()">Submit</button>
         </div>
-        <div id="imgApi" class="border border-black col-md mt-3 mb-3 mx-5 p-3 fs-6">
-            <div *ngIf="planetDetails">
-                <h2>{{ planetDetails.englishName }}</h2>
-                <p>Gravity: {{ planetDetails.gravity }}</p>
-                <p>Mass: {{ planetDetails.mass.massValue }} x 10^{{ planetDetails.mass.massExponent }} kg</p>
-                <p>Volume ; {{planetDetails.vol.volValue}} valeur exponentiel {{planetDetails.vol.volExponent}} </p>
-                <p>Close planet: {{ planetDetails.aroundPlanet.planet }}</p>
 
-                <!-- Display other planet details as desired -->
-            </div>
-        </div>
 
     </div>
 </section>
 <!-- </div> -->
 
-<div class="api-result border border-black col-sm mt-3 mb-3 p-3 fs-6"></div>
+<div class="api-result border border-black col-sm mt-3 mb-3 p-3 fs-6">
+    <div id="" *ngIf="planetDetails">
+        <h2 style="color: white;">{{ planetDetails.englishName }}</h2>
+        <p>Gravity: {{ planetDetails.gravity }}</p>
+        <p>Mass: {{ planetDetails.mass.massValue }} x 10^{{ planetDetails.mass.massExponent }} kg</p>
+        <p>Volume ; {{planetDetails.vol.volValue}} valeur exponentiel {{planetDetails.vol.volExponent}} </p>
+        <p>Close planet: {{ planetDetails.aroundPlanet.planet }}</p>
+        <p>Planest density : {{planetDetails.density}} </p>
+
+        <!-- Display other planet details as desired -->
+    </div>
+</div>
 
 <!-- </section> -->

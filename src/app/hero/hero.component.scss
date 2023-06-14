@@ -115,6 +115,10 @@
   display: block;
 }
 
+#main {
+  display: grid;
+}
+
 
 
 /*********************************/
@@ -124,7 +128,7 @@
   transition: all 0.5s ease;
   padding: 0;
   background-color: #051039;
-
+  justify-content: space-between;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
@@ -139,6 +143,7 @@
   font-family: "DM Sans", sans-serif;
   padding-top: 12px;
   padding-bottom: 12px;
+  justify-content: space-between;
 }
 
 .navbar .navbar-nav .nav-item:hover .nav-link,

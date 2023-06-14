@@ -25,11 +25,12 @@ h2 {
     margin: 0 10px;
 }
 
-#imgApi {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
+// #imgApi {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-template-rows: repeat(2, 1fr);
+//     background-image: url(../../assets/images/earth.png);
+// }
 
 img {
     width: 95%;
@@ -73,8 +74,19 @@ button {
 .api-result {
     // width: auto;
     // min-height: 700px;
-    min-height: 70vh;
+    min-height: 90vh;
     margin: 0 10px;
     background-image: url("/assets/images/earth.png");
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    border: solid red 2px;
+    margin: 0;
+}
+
+#api-content {
+    background-color: white;
+    color: black;
 }
