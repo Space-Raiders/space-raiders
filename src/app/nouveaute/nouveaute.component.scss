@@ -1,3 +1,5 @@
+// Partie de Dadou
+
 .results {
   display: grid;
   column-gap: 14px;
@@ -39,22 +41,21 @@ button {
   }
 }
 
-
 // Franck
 section {
   // border: 1px solid red;
-  padding: 20px 15%;
+  padding: 1px 5%; // Modifier par Dadou.
   margin: 0px auto;
 }
 
 h2, form {
   margin: 50px auto;
-  text-align: center;
+  //text-align: center; Modifier par Dadou.
 }
 
 h2 {
   color: #051039;
-  font-family: Arial, Helvetica, sans-serif;
+  //font-family: Arial, Helvetica, sans-serif;
   // font-size: 18px;
   font-weight: 700;
 }
