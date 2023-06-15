@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {LieuDAtterrissage} from "./lieu-d-atterrissage";
+import {LieuDAtterrissage} from "../../-interfaces/lieu-d-atterrissage";
 
 @Component({
   selector: 'app-lieu-d-atterrissage',

@@ -1,6 +1,6 @@
 import {Component, inject} from '@angular/core';
-import {LieuDAtterrissage} from "./lieu-d-atterrissage/lieu-d-atterrissage";
-import {LieuDAtterrissageService} from "./lieu-d-atterrissage/lieu-d-atterrissage.service";
+import {LieuDAtterrissage} from "../-interfaces/lieu-d-atterrissage";
+import {LieuDAtterrissageService} from "../-services/lieu-d-atterrissage.service";
 
 @Component({
   selector: 'app-nouveaute',

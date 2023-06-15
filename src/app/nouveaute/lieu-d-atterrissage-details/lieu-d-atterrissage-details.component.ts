@@ -1,7 +1,7 @@
 import {Component, inject} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {LieuDAtterrissage} from "../lieu-d-atterrissage/lieu-d-atterrissage";
-import {LieuDAtterrissageService} from "src/app/nouveaute/lieu-d-atterrissage/lieu-d-atterrissage.service";
+import {LieuDAtterrissage} from "../../-interfaces/lieu-d-atterrissage";
+import {LieuDAtterrissageService} from "src/app/-services/lieu-d-atterrissage.service";
 import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
