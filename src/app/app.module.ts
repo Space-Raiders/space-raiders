@@ -20,8 +20,6 @@ import { HeaderComponent } from "./header/header.component";
 import { HeroComponent } from "./hero/hero.component";
 import { NewsletterComponent } from "./newsletter/newsletter.component";
 import { ValidationReactiveComponent } from './inscription/validation-reactive/validation-reactive.component';
-import { NgOptimizedImageDirective } from './-directives/ng-optimized-image.directive';
-import { ImagesComponent } from './-directives/images/images.component';
 
 @NgModule({
   declarations: [
@@ -38,9 +36,7 @@ import { ImagesComponent } from './-directives/images/images.component';
     HeroComponent,
     NewsletterComponent,
     PrixComponent,
-    ValidationReactiveComponent,
-    NgOptimizedImageDirective,
-    ImagesComponent
+    ValidationReactiveComponent
   ],
   imports: [
     BrowserModule,
