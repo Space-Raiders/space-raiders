@@ -1,7 +1,7 @@
 <div id="main">
-    <nav class="navbar navbar-expand nav-light fixed-top sticky ">
+    <nav [ngClass]="{ 'hide-navbar': !isNavbarVisible }" class="navbar navbar-expand-lg nav-light fixed-top sticky ">
         <div class="container">
-            <a class="navbar-brand" href="">
+            <a (click)="scrollToComponent('home')" class="navbar-brand">
                 <span class="logo-light-mode">
                     <img src="./assets/images/logo-light.png" class="l-light" alt="">
                     <img src="./assets/images/logo-dark.png" class="l-dark" alt="">
@@ -15,27 +15,31 @@
             </button>
 
 
+
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navbar-navlist">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Actualités</a>
+                        <a (click)="scrollToComponent('api')" class="nav-link">Informations</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#service">Données</a>
+                        <a (click)="scrollToComponent('tarif')" class="nav-link">Tarif</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">Tarif</a>
+                        <a (click)="scrollToComponent('nouveauter')" class="nav-link">Actualite</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#price">Destination</a>
+                        <a (click)="scrollToComponent('inscription')" class="nav-link">Inscription</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#blog">Contact</a>
+                        <a (click)="scrollToComponent('destination')" class="nav-link">Destination</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Newsletter</a>
+                        <a (click)="scrollToComponent('newsletter')" class="nav-link">Newsletter</a>
                     </li>
                 </ul>
+
+
 
 
                 <div id="burger" class="dropdown">
@@ -49,6 +53,8 @@
                         <li><button class="dropdown-item" type="button">Something else here</button></li>
                     </ul>
                 </div>
+
+
 
 
                 <div id="loginLogo">
@@ -72,6 +78,8 @@
         <!--end container-->
     </nav>
     <!-- END NAVBAR -->
+
+
 
 
 </div>

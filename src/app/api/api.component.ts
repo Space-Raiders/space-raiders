@@ -3,18 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { ConfigService } from '../config.service';
 // import { ConfigService } from '../config.service';
 
-
 interface Body {
   englishName: string;
   // Add other properties as needed
 }
 
-
 interface Response {
   bodies: Body[];
 }
-
-
 
 @Component({
   selector: 'app-api',
@@ -27,7 +23,6 @@ export class ApiComponent {
 
 
   constructor(private solarSystemService: ConfigService) { }
-
 
   searchPlanet(): void {
     this.solarSystemService.getPlanetDetails(this.planetName).subscribe(
@@ -43,9 +38,6 @@ export class ApiComponent {
 
   /////////////////////////////////
 }
-
-
-
 
 
 // import { Component } from '@angular/core';
