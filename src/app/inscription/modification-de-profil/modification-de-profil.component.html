@@ -1,7 +1,7 @@
 <section class="listing-apply">
   <h2 class="section-heading">Si vous êtes intéressé par nos offres, <br>inscrivez-vous dès que possible.</h2>
 
-  <form [formGroup]="profilForm">
+  <form [formGroup]="profilForm" (ngSubmit)="onSubmit()">
     <div class="input-container">
       <i class="fa fa-user icon"></i>
       <input id="nom" type="text" formControlName="nom" class="input-field" placeholder="nom">
@@ -43,6 +43,8 @@
         <!-- <label for="alias-{{ i }}">Alias :</label> -->
         <input id="alias-{{ i }}" type="text" [formControlName]="i" class="input-field" placeholder="ajouter des renseignements personnels">
       </div>
+
+      <button type="button" (click)="onSubmit()" class="btn" style="margin-bottom: 15px">VALIDER</button>
     </div>
 
     <!-- <p>statut du formulaire : {{profilForm.status}}</p> -->

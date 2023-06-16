@@ -28,7 +28,6 @@ export class LieuDAtterrissageDetailsComponent {
     motDePasse: new FormControl('', {nonNullable: true})
   });
 
-
   submitApplication() {
     this.lieuDAtterrissageService.submitApplication(
       this.applyForm.value.nomEtPrenom ?? '',
