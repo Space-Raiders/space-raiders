@@ -1,35 +1,72 @@
 <section class="container-fluid ">
 
-
-    <h2 class="text-center mb-5 mx-5 fw-bold">Notre encyclopédie de l'espace à votre disposition
+    <h2 class="text-center mb-5 mx-5 fw-bold">Et vous ? Quelle planète êtes-vous ?
     </h2>
-
-
+    
     <div class="search row">
-        <div class="d-flex gap-2 fs-6">
-            <input class="col-sm-10 text-center border-1" type="text" placeholder="Learn about space"
+        <div class="d-flex gap-2">
+            <input class="col-sm-10 flex-grow-1 text-center " type="text" placeholder="mars, lune, jupiter,..."
                 [(ngModel)]="planetName">
             <button class="col-sm border-1 p-3" (click)="searchPlanet()">Submit</button>
         </div>
+    </div>
 
+    <div class="api-result border border-black col-sm my-3 py-5 fs-6 mx-auto d-flex row ">
+        <div class="d-flex justify-content-center">
+            <h2 style="color: white; text-transform: uppercase;" class="mb-3 me-2">Planète : </h2>
+            
+            <h2 style="color: white; text-transform: uppercase;">{{planetDetails.englishName }}</h2>
+        </div>
 
+        <div class="row d-flex justify-content-center align-content-center align-items-center mx-auto">
+        
+            <div class="col-md d-flex justify-content-center align-content-center align-items-center">
+                <div  class="api-card py-3 text-end d-flex flex-column justify-content-center">
+                    <p>Gravité :</p>
+                    <p>Masse :</p>
+                    <p>Volume :</p>
+                    <p>Valeur exponentielle :</p>
+                    <p>Planète proche :</p>
+                    <p>Densité de la planète :</p>
+                </div>
+                <div style="border-radius: 0;" class="api-card2 py-3 text-start d-flex flex-column justify-content-center align-content-center align-items-center">
+                    <div class="" *ngIf="planetDetails">
+                        <p class="m-1">{{planetDetails.gravity}}</p>
+                        <p class="m-1">{{planetDetails.mass.massValue}} x 10^{{ planetDetails.mass.massExponent }} kg</p>
+                        <p class="m-1">{{planetDetails.vol.volValue}}  </p>
+                        <p class="m-1">{{planetDetails.vol.volExponent}}</p>
+                        <p class="m-1">{{planetDetails.aroundPlanet.planet}}</p>
+                        <p class="m-1">{{planetDetails.density}} </p>
+                    </div>    
+                </div>
+            </div>
 
+            <div class="col-md d-flex justify-content-center align-content-center align-items-center">
+                <div  class="api-card py-3 text-end d-flex flex-column justify-content-center">
+                    <p>Vitesse d'échappement :</p>
+                    <p>Rayon moyen :</p>
+                    <p>Découvert par :</p>
+                    <p>Date de découverte :</p>
+                    <p>Type de corps :</p>
+                    <p>Nom alternatif :</p>
+                </div>
+                <div style="border-radius: 0;" class="api-card2 py-3 text-start d-flex flex-column justify-content-center align-content-center align-items-center">
+                    <div class="" *ngIf="planetDetails" >
+                        <p class="m-1">Escape : {{planetDetails.escape}}</p>
+                        <p class="m-1">{{planetDetails.meanRadius }}</p>
+                        <p class="m-1">{{planetDetails.discoveredBy}}  </p>
+                        <p class="m-1">{{planetDetails.discoveryDate}}</p>
+                        <p class="m-1">{{planetDetails.bodyType}}</p>
+                        <p class="m-1">{{planetDetails.alternativeName}} </p>
+                    </div>  
+                    
+                    <div *ngIf="!planetDetails">
+                        fdfsqdfqdsf
+                    </div>
+                    
+                </div>
+            </div>
 
+        </div>        
     </div>
 </section>
-<!-- </div> -->
-
-
-<div class="api-result border border-black col-sm mt-3 mb-3 p-3 fs-6">
-    <div style="background-color: white;" id="" *ngIf="planetDetails">
-        <h2 style="color: black;">{{ planetDetails.englishName }}</h2>
-        <p>Gravity: {{ planetDetails.gravity }}</p>
-        <p>Mass: {{ planetDetails.mass.massValue }} x 10^{{ planetDetails.mass.massExponent }} kg</p>
-        <p>Volume ; {{planetDetails.vol.volValue}} valeur exponentiel {{planetDetails.vol.volExponent}} </p>
-        <p>Close planet: {{ planetDetails.aroundPlanet.planet }}</p>
-        <p>Planest density : {{planetDetails.density}} </p>
-
-
-        <!-- Display other planet details as desired -->
-    </div>
-</div>

@@ -3,11 +3,6 @@
     padding: 0;
 }
 
-body {
-    background-color: #f8f9f9;
-
-}
-
 h3 {
     color:#051039;
     font-family: Arial, Helvetica, sans-serif;
@@ -22,7 +17,6 @@ div, p {
 section {
     // border: 1px solid red;
     padding: 50px 5%;
-    background-color: #f8f9f9;
 }
 
 .bloc{
@@ -42,23 +36,27 @@ section {
 }
 
 img {
-    width: 2%;
+    // width: 2%;
+    width: min(20px);
     margin-right: 20px;
 }
 .cell-icon {
-    width: 5%;
+    // border: 1px solid red;
+    // width: 10px;
+    // width: min(20px);
+    width: Min(15px);
+    
 }
 
 button {
     background-color: #051039;
     border-radius: 3px;
 }
-
-a {
-    text-decoration: none;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-}
+    a {
+        text-decoration: none;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
 .bgGrey:hover {
     background-color: rgb(244, 242, 242);
