@@ -7,7 +7,7 @@
         <div class="d-flex gap-2">
             <input class="col-sm-10 flex-grow-1 text-center " type="text" placeholder="mars, lune, jupiter,..."
                 [(ngModel)]="planetName">
-            <button class="col-sm border-1 p-3" (click)="searchPlanet()">Submit</button>
+            <button class="col-sm border-1 p-3" (click)="searchPlanet()">Envoyer</button>
         </div>
     </div>
 
@@ -22,17 +22,17 @@
         
             <div class="col-md d-flex justify-content-center align-content-center align-items-center">
                 <div  class="api-card py-3 text-end d-flex flex-column justify-content-center">
-                    <p>Gravité :</p>
-                    <p>Masse :</p>
-                    <p>Volume :</p>
-                    <p>Valeur exponentielle :</p>
-                    <p>Planète proche :</p>
-                    <p>Densité de la planète :</p>
+                    <p *ngIf="planetDetails.gravity ">Gravité :</p>
+                    <p *ngIf=" planetDetails.mass.massValue">Masse :</p>
+                    <p *ngIf="planetDetails.vol.volValue ">Volume :</p>
+                    <p *ngIf="planetDetails.vol.volExponent ">Valeur exponentielle :</p>
+                    <p *ngIf="planetDetails.aroundPlanet.planet">Planète proche :</p>
+                    <p *ngIf="planetDetails.density">Densité de la planète :</p>
                 </div>
                 <div style="border-radius: 0;" class="api-card2 py-3 text-start d-flex flex-column justify-content-center align-content-center align-items-center">
                     <div class="" *ngIf="planetDetails">
                         <p class="m-1">{{planetDetails.gravity}}</p>
-                        <p class="m-1">{{planetDetails.mass.massValue}} x 10^{{ planetDetails.mass.massExponent }} kg</p>
+                        <p class="m-1">{{planetDetails.mass.massValue}}</p>
                         <p class="m-1">{{planetDetails.vol.volValue}}  </p>
                         <p class="m-1">{{planetDetails.vol.volExponent}}</p>
                         <p class="m-1">{{planetDetails.aroundPlanet.planet}}</p>
@@ -43,27 +43,22 @@
 
             <div class="col-md d-flex justify-content-center align-content-center align-items-center">
                 <div  class="api-card py-3 text-end d-flex flex-column justify-content-center">
-                    <p>Vitesse d'échappement :</p>
-                    <p>Rayon moyen :</p>
-                    <p>Découvert par :</p>
-                    <p>Date de découverte :</p>
-                    <p>Type de corps :</p>
-                    <p>Nom alternatif :</p>
+                    <p *ngIf="planetDetails.escape" >Vitesse d'échappement :</p>
+                    <p *ngIf="planetDetails.meanRadius">Rayon moyen :</p>
+                    <p *ngIf="planetDetails.discoveredBy">Découvert par :</p>
+                    <p *ngIf="planetDetails.discoveryDate">Date de découverte :</p>
+                    <p *ngIf="planetDetails.bodyType">Type de corps :</p>
+                    <p *ngIf="planetDetails.alternativeName">Nom alternatif :</p>
                 </div>
                 <div style="border-radius: 0;" class="api-card2 py-3 text-start d-flex flex-column justify-content-center align-content-center align-items-center">
                     <div class="" *ngIf="planetDetails" >
-                        <p class="m-1">Escape : {{planetDetails.escape}}</p>
+                        <p class="m-1">{{planetDetails.escape}}</p>
                         <p class="m-1">{{planetDetails.meanRadius }}</p>
                         <p class="m-1">{{planetDetails.discoveredBy}}  </p>
                         <p class="m-1">{{planetDetails.discoveryDate}}</p>
                         <p class="m-1">{{planetDetails.bodyType}}</p>
                         <p class="m-1">{{planetDetails.alternativeName}} </p>
-                    </div>  
-                    
-                    <div *ngIf="!planetDetails">
-                        fdfsqdfqdsf
-                    </div>
-                    
+                    </div>     
                 </div>
             </div>
 
