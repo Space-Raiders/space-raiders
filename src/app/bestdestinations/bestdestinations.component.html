@@ -2,41 +2,26 @@
 
     <div class="row d-flex flex-column mx-auto">
 
-        <h2 class="my-5 text-center">Avec l'agence Space Raiders, tous vos rêves spaciales ont une destination</h2>
+        <h2 class="my-5 text-center">Avec l'agence Space Raiders, vos rêves spaciales ont une destination</h2>
 
         <div class="col-sm d-flex justify-content-center gap-3 mb-5">
-            <input class="col-sm-5 text-center border-1" type="text" placeholder="De belles images pleins les yeux">
-            <button class="col-sm-1 border-1 p-3" type="submit">Envoyer</button>
+            <input class="col-sm-5 text-center border-1" type="text" placeholder="mars, lune, saturne,..."
+                [(ngModel)]="searchQuery" (keyup.enter)="searchImages()" >
+            <button class="col-sm-1 border-1 p-3" (click)="searchImages()" type="submit">Envoyer</button>
         </div>
-        
-        <div class="col-sm">
-            <div class="row d-flex justify-content-center gap-3 mx-3">
-                <div id="img1" class="col-sm-4 commun ">
-                    <h4>Lune</h4>
-                    <!-- <img src="#" alt="image api"> -->
-                </div>
-                <div class="col-sm-4 d-flex flex-column row-gap-3">
-                    <div id="img2" class="col-sm commun">
-                        <h4>Mars</h4>
-                        <!-- <img src="#" alt="image api"> -->
-                    </div>
-                    <div class="col-sm ">
-                        <div class="row d-flex gap-3">
-                            <div id="img3" class="col-sm petiteImage commun">
-                                <h4>Station ISS</h4>
-                                <!-- <img src="#" alt="image api"> -->
-                            </div>
-                            <div id="img4" class="col-sm petiteImage commun">
-                                <!-- <img src="#" alt="image api"> -->
-                                <h4>Abysses</h4>
-                            </div>
 
-                        </div>
-                    </div>
+        <div id="imgApi" class="col-sm">
+
+            <div class="row d-flex" >
+                <div class="col-sm-8 gap-3 mx-auto d-flex justify-content-center flex-wrap">
+                    <img class="commun" [src]="hits[0].webformatURL" alt="{{ hits[0].tags }}">
+                    <img class="commun" [src]="hits[1].webformatURL" alt="{{ hits[1].tags }}">
+                    <img class="commun" [src]="hits[2].webformatURL" alt="{{ hits[2].tags }}">
+                    <img class="commun" [src]="hits[3].webformatURL" alt="{{ hits[3].tags }}">
+                    <img class="commun" [src]="hits[4].webformatURL" alt="{{ hits[4].tags }}">
+                    <img class="commun" [src]="hits[5].webformatURL" alt="{{ hits[5].tags }}">
                 </div>
             </div>
         </div>
-
     </div>
-
 </section>
