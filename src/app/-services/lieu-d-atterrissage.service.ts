@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {LieuDAtterrissage} from "src/app/nouveaute/lieu-d-atterrissage/lieu-d-atterrissage";
+import {LieuDAtterrissage} from "src/app/-interfaces/lieu-d-atterrissage";
 
 @Injectable({
   providedIn: 'root'
